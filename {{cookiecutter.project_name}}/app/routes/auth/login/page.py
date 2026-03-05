@@ -12,7 +12,7 @@ from logger import get_logger
 
 from app.auth import create_access_token, create_refresh_token, verify_password
 from app.auth.models import UserLogin, TokenResponse
-{% if cookiecutter.database != 'none' %}from app.database import SessionLocal
+{% if cookiecutter.database_type != 'none' %}from app.database import SessionLocal
 from app.db_models.user import User
 {% endif %}
 
@@ -36,7 +36,7 @@ class LoginRoutes(RouteBase):
         Returns access_token and refresh_token on success.
         """
         logger.info(f"Login attempt for: {credentials.email}")
-{% if cookiecutter.database != 'none' %}
+{% if cookiecutter.database_type != 'none' %}
         # Create database session
         db = SessionLocal()
 

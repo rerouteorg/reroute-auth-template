@@ -34,7 +34,7 @@ adapter.register_routes()
 @app.on_event("startup")
 async def startup_event():
     """Initialize database tables on startup"""
-{% if cookiecutter.database != 'none' %}    from app.database import init_db
+{% if cookiecutter.database_type != 'none' %}    from app.database import init_db
     from app.db_models.user import User  # Import to register models
     init_db()
     print("Database tables initialized!")

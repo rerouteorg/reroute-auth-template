@@ -9,15 +9,15 @@ fastapi
 uvicorn[standard]
 
 # Database
-{% if cookiecutter.database == 'postgresql' %}psycopg2-binary
+{% if cookiecutter.database_type == 'postgresql' %}psycopg2-binary
 sqlalchemy
 alembic
-{% elif cookiecutter.database == 'mysql' %}pymysql
+{% elif cookiecutter.database_type == 'mysql' %}pymysql
 sqlalchemy
 alembic
-{% elif cookiecutter.database == 'sqlite' %}sqlalchemy
+{% elif cookiecutter.database_type == 'sqlite' %}sqlalchemy
 alembic
-{% elif cookiecutter.database == 'mongodb' %}pymongo
+{% elif cookiecutter.database_type == 'mongodb' %}pymongo
 motor
 {% endif %}
 
@@ -29,7 +29,7 @@ bcrypt
 pyjwt
 
 # Testing
-{% if cookiecutter.include_tests == 'Yes' %}pytest
+{% if cookiecutter.include_tests == true %}pytest
 pytest-asyncio
 httpx
 {% endif %}

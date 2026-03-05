@@ -12,7 +12,7 @@ from logger import get_logger
 
 from app.auth import verify_token
 from app.auth.models import UserResponse
-{% if cookiecutter.database != 'none' %}from app.database import SessionLocal
+{% if cookiecutter.database_type != 'none' %}from app.database import SessionLocal
 from app.db_models.user import User
 {% endif %}
 
@@ -49,7 +49,7 @@ class MeRoutes(RouteBase):
         email = payload.get("email")
 
         logger.info(f"Profile accessed by: {email}")
-{% if cookiecutter.database != 'none' %}
+{% if cookiecutter.database_type != 'none' %}
         # Fetch full user data from database
         db = SessionLocal()
         try:

@@ -12,7 +12,7 @@ from logger import get_logger
 
 from app.auth import hash_password
 from app.auth.models import UserRegister, UserResponse, MessageResponse
-{% if cookiecutter.database != 'none' %}from app.database import SessionLocal
+{% if cookiecutter.database_type != 'none' %}from app.database import SessionLocal
 from app.db_models.user import User
 {% endif %}
 
@@ -36,7 +36,7 @@ class RegisterRoutes(RouteBase):
         Returns user info on success (without password).
         """
         logger.info(f"Registration attempt for: {user_data.email}")
-{% if cookiecutter.database != 'none' %}
+{% if cookiecutter.database_type != 'none' %}
         # Create database session
         db = SessionLocal()
 
