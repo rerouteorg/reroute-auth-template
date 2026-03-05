@@ -1,0 +1,15 @@
+{
+  "project_name": "my-auth-api",
+  "description": "Authentication API",
+  "framework": "fastapi",
+  "host": "0.0.0.0",
+  "port": 7376,
+  "reload": true,
+  "include_tests": "Yes",
+  "database": "postgresql",
+  "package_manager": "uv",
+  "jwt_secret": "CHANGE_THIS_SECRET",
+  "jwt_algorithm": "HS256",
+  "access_token_expire_minutes": "30",
+  "refresh_token_expire_days": "7"
+}
