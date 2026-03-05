@@ -1,4 +1,10 @@
 {
+  "_requirements": {
+    "database": {
+      "type": "required",
+      "message": "Auth template requires a database for user authentication"
+    }
+  },
   "project_name": "my-auth-api",
   "description": "Authentication API",
   "author_name": "Your Name",
