@@ -6,7 +6,7 @@
 
 A production-ready Cookiecutter template for FastAPI applications with complete JWT authentication, user management, and database integration.
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![REROUTE](https://img.shields.io/badge/REROUTE-0.4.0%2B-green.svg)](https://github.com/cbsajan/reroute)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org)
 
