@@ -78,7 +78,7 @@ A production-ready Cookiecutter template for FastAPI applications with complete 
 pip install reroute[fastapi]
 
 # Create a new auth-enabled project
-reroute init my-auth-api --template gh:cbsajan/reroute-auth
+reroute init my-auth-api --template gh:rerouteorg/reroute-auth-template
 
 # Navigate to project
 cd my-auth-api
@@ -107,7 +107,7 @@ Interactive API docs: http://localhost:7376/docs
 pip install cookiecutter
 
 # Generate project
-cookiecutter gh:cbsajan/reroute-auth
+cookiecutter gh:rerouteorg/reroute-auth-template
 
 # Follow the prompts
 cd my-auth-api
